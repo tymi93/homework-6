@@ -625,6 +625,28 @@ button {
     fill: #2196F3;
 }
 
+.modal-txt {
+    margin-top: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+}
+
+.modal-form-input-desc {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+
 /* =============== /MODAL WINDOW =============== */
 
 /* =============== PORTFOLIO =============== */
