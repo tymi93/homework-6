@@ -40,6 +40,17 @@ button {
     padding-left: 15px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
 /* =============== COMPONENTS =============== */
 
 .body{
@@ -695,6 +706,16 @@ button {
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-form-message::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
 .modal-form-input-icon{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: #000000;
@@ -705,6 +726,72 @@ button {
     display: block;
     width: 18px;
     height: 18px;
+}
+
+.modal-form-check-desc {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+    align-items: center;
+    display: flex;
+    margin-bottom: 29px;
+}
+
+.modal-form-check-description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+    color: #2196F3;
+}
+
+.modal-form-check-desc::before {
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+    content: '';
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+    background-color: #2196F3;
+    background-image: url(../image/icon.svg);
+    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
+}
+
+.modal-form-check:focus+.modal-form-check-desc::before {
+    outline: 1px solid #2196F3;
+}
+
+.modal-form-submit {
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
 }
 
 /* =============== /MODAL FORM =============== */
