@@ -592,6 +592,7 @@ button {
     background-color: #fff;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
 }
 
 .modal-close-btn {
@@ -611,7 +612,7 @@ button {
 }
 
 .modal-close-btn-icon {
-    background-color: #000000;
+    fill: #000000;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -626,7 +627,6 @@ button {
 }
 
 .modal-txt {
-    margin-top: 40px;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -637,17 +637,77 @@ button {
     color: #212121;
 }
 
+/* =============== /MODAL WINDOW =============== */
+
+/* =============== MODAL FORM =============== */
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-fieled {
+    margin-bottom: 10px;
+}
+
+.modal-form-input-wrapper {
+    display: block;
+    position: relative;
+}
+
+.modal-form-input {
+    width: 92.5%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus,
+.modal-form-message:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+    fill: #2196F3;
+}
+
 .modal-form-input-desc {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 18px;
     letter-spacing: 0.01em;
-    color: #757575;
+    margin-bottom: 4px;
+    display: block;
 }
 
-/* =============== /MODAL WINDOW =============== */
+.modal-form-message {
+    width: 95%;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input-icon{
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #000000;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translate(0, -50%);
+    display: block;
+    width: 18px;
+    height: 18px;
+}
+
+/* =============== /MODAL FORM =============== */
 
 /* =============== PORTFOLIO =============== */
 
