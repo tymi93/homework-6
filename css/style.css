@@ -301,6 +301,10 @@ ul {
     border-color: transparent;
 }
 
+.modal-btn:hover {
+    cursor: pointer;
+}
+
 .section-index {
     padding: 94px 0;
 }
@@ -673,28 +677,6 @@ margin-left: 10px;
     display: flex;
 }
 
-.footer-btn {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    font-family: inherit;
-    letter-spacing: 0.06em;
-    color: var(--white-color);
-    background: var(--main-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: none;
-    padding: 10px 32px;
-}
-
-.footer-btn:hover {
-    background-color: #188CE8;
-}
-
-.footer-button-svg {
-    margin-left: 10px;
-}
-
 /* =============== /FUTER =============== */
 
 /* =============== MODAL WINDOW =============== */
@@ -976,6 +958,11 @@ margin-left: 10px;
     border: 1px solid #EEEEEE;
 }
 
+.portfolio-card-link-wraper {
+    width: 100%;
+    height: 0;
+}
+
 .portfolio-card-wraper {
     position: relative;
     overflow: hidden;
@@ -994,7 +981,7 @@ margin-left: 10px;
 
 .overlay {
     transition: transform 500ms linear;
-    transform: translate(0, 100%);
+    transform: translate(0, 102.5%);
     overflow: auto;
     position: absolute;
     left: 0;
