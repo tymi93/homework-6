@@ -1,25 +1,63 @@
+:root {
+    --accent-color: #212121;
+    --white-color: #FFFFFF;
+    --main-color: #2196F3;
+    --top-color: #F5F4FA;
+    --secondary-color: #757575;
+    --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
 h1,
 h2,
 h3,
 h4,
-p{
+h5,
+h6 {
+    overflow-wrap: break-word;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-ul,
-ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
+a {
+    text-decoration: none;
 }
 
-img {
-    display: block;
-}
-
-button {
-    cursor: pointer;
+ul {
+    list-style: none;
 }
 
 
@@ -512,6 +550,33 @@ button {
     background-color: #2196F3;
 }
 
+.footer-social-form{
+padding-top: 12px;}
+
+
+.footer-form-input{
+width: 358px;
+height: 50px;
+padding: 15px 16px;
+background-color: #2F303A ;
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.3);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+border-radius: 4px;
+margin-right: 12px;
+}
+
+.footer-form-input::placeholder{
+color: rgba(255, 255, 255, 0.6);
+;}
+
+.footer-form-button{
+display: flex;
+}
+.footer-button-svg{
+margin-left: 10px;
+}
+
 .contact-futer-list {
     background: #2F303A;
     padding-top: 60px;
@@ -571,6 +636,40 @@ button {
     color: #2196F3;
 }
 
+.footer-form {
+    display: flex;
+}
+
+.footer-social-form {
+    padding-top: 12px;
+}
+
+
+.footer-form-input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    background-color: #2F303A;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+}
+
+.footer-form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    ;
+}
+
+.footer-form-button {
+    display: flex;
+}
+
+.footer-button-svg {
+    margin-left: 10px;
+}
+
 /* =============== /FUTER =============== */
 
 /* =============== MODAL WINDOW =============== */
@@ -583,8 +682,8 @@ button {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visability 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opasity var(--transition),
+    visibility var(--transition);
 }
 
 .backdrop.is-hidden {
@@ -599,53 +698,51 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 528px;
-    height: 581px;
-    background-color: #fff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+    height: 580px;
+    background-color: rgb(255, 255, 255);
     padding: 40px;
 }
 
 .modal-close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     width: 30px;
     height: 30px;
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--transition);
 }
 
 .modal-close-btn-icon {
-    fill: #000000;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill var(--transition);
 }
+
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-    border-color: #2196F3;
+    background-color: var(--white-color);
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
-    fill: #2196F3;
+    fill: var(--main-color);
 }
 
 .modal-txt {
-    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--accent-color);
+    margin-bottom: 12px;
 }
 
 /* =============== /MODAL WINDOW =============== */
@@ -667,52 +764,47 @@ button {
 }
 
 .modal-form-input {
-    width: 92.5%;
+    width: 100%;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color var(--transition);
 }
 
 .modal-form-input:focus,
 .modal-form-message:focus {
-    border-color: #2196F3;
+    border-color: var(--main-color);
     outline: none;
 }
 
 .modal-form-input:focus + .modal-form-input-icon {
-    fill: #2196F3;
+    fill: var(--main-color);
 }
 
 .modal-form-input-desc {
-    font-family: 'Roboto', sans-serif;
+    display: block;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.01em;
+    color: var(--secondary-color);
     margin-bottom: 4px;
-    display: block;
 }
 
 .modal-form-message {
-    width: 95%;
+    width: 100%;
     height: 120px;
     padding: 12px 16px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
     resize: none;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transition: border-color var(--transition);
 }
 
 .modal-form-message::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
+    font-size: 12px;
     color: rgba(117, 117, 117, 0.5);
 }
 
@@ -724,51 +816,41 @@ button {
     left: 12px;
     transform: translate(0, -50%);
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
 }
 
 .modal-form-check-desc {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #757575;
-    align-items: center;
     display: flex;
-    margin-bottom: 29px;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: 12px;
+    color: #757575;
 }
 
 .modal-form-check-description {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    text-decoration-line: underline;
-    color: #2196F3;
+    color: var(--main-color);
 }
 
 .modal-form-check-desc::before {
     display: block;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #212121;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--accent-color);
     border-radius: 2px;
     content: '';
     cursor: pointer;
+    background: #FFFFFF;
     margin-right: 7px;
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
-    background-color: #2196F3;
     background-image: url(../image/icon.svg);
+    background-color: var(--main-color);
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    background-origin: border-box;
+    border: none;
 }
 
 .modal-form-check:focus+.modal-form-check-desc::before {
@@ -776,22 +858,26 @@ button {
 }
 
 .modal-form-submit {
-    align-self: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 32px;
-    padding-right: 32px;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 1.87;
+    line-height: 1.88;
+    font-family: inherit;
     letter-spacing: 0.06em;
-    color: #FFFFFF;
-    background: #2196F3;
+    min-width: 160px;
+    align-self: center;
+    padding: 10px 55px;
+    color: var(--white-color);
+    background: var(--main-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border-color: transparent;
+    transition: color var(--transition),
+    background-color var(--transition);
+    border: none;
+}
+
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+    background-color: background-color #188CE8;
 }
 
 /* =============== /MODAL FORM =============== */
