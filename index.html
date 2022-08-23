@@ -117,26 +117,32 @@
         <div class="container">
             <h2 class="title activity-title">Чем мы занимаемся</h2>
             <ul class="list activity-list">
-                <li class="activity-card">
+                <li>
+                <div class="activity-card">
                     <img class="activity-photo" src="./image/box1.jpg" 
                     alt="Планшет и клавиатура"
                     width="370"
                     height="294">
                     <p class="activite-txt">Десктопные приложения</p>
+                </div>
                 </li>
-                <li class="activity-card">
+                <li>
+                <div class="activity-card">
                     <img class="activity-photo" src="./image/box2.jpg" 
                     alt="Телефон и ноутбук"
                     width="370"
                     height="294">
                     <p class="activite-txt">Мобильные приложения</p>
+                </div>
                 </li>
-                <li class="activity-card">
+                <li>
+                <div class="activity-card">
                     <img class="activity-photo" src="./image/box3.jpg" 
                     alt="Планшет и разные цвета"
                     width="370"
                     height="294">
                     <p class="activite-txt">Дизайнерские решения</p>
+                </div>
                 </li>
             </ul>
         </div>
@@ -420,6 +426,20 @@
                 </li>
             </ul>
         </div>
+        <div class="footer-social-form">
+            <p class="footer-txt">
+                Подпишитесь на рассылку</p>
+            <form class="footer-form">
+                <input type="email" name="email" placeholder="E-mail" required class="footer-form-input">
+
+                <button type="submit" class="footer-form-button modal-btn">Подписаться
+                    <svg width="24" height="24" class="footer-button-svg">
+                        <use href="./image/sprite.svg#airplane"></use>
+                    </svg>
+
+                </button>
+            </form>
+        </div>
     </div>
 </footer>
 
@@ -494,9 +514,6 @@
             </label>
             <button type="submit" class="modal-form-submit">Отправить</button>
         </form>
-    </div>
-    <div class="button-div-rossilka">
-        <span class="pidpis">Подписаться</span>
     </div>
 </div>
 
